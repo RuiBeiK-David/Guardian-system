@@ -230,7 +230,7 @@
     <script src="./js/bootstrap-5.1.3/bootstrap.bundle.min.js"></script>
     <script src="./js/message.min.js"></script>
     <script>
-        // 检查登录状态并导航
+        // 检查登录状态并导航 Check login status and navigate
         function checkLoginAndNavigate(url) {
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
             if (isLoggedIn) {
@@ -241,17 +241,17 @@
             }
         }
 
-        // 保存设置
+        // 保存设置 Save settings
         document.getElementById('settingsForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // 在这里添加保存设置的逻辑
+            // 在这里添加保存设置的逻辑 Add the logic for saving settings here
             $.message({
                 message: 'Settings saved successfully!',
                 type: 'success'
             });
         });
 
-        // 确认删除数据
+        // 确认删除数据 Confirm to delete data
         function confirmDataDeletion() {
             if (confirm('Are you sure you want to delete all your data? This action cannot be undone.')) {
                 $.message({
@@ -261,13 +261,13 @@
             }
         }
 
-        // 注销功能
+        // 注销功能 Logout Function
         function logout() {
             localStorage.removeItem('isLoggedIn');
             window.location.href = 'index.html';
         }
 
-        // 检查登录状态
+        // 检查登录状态 Check login status
         document.addEventListener('DOMContentLoaded', function() {
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
             if (!isLoggedIn) {
