@@ -1005,32 +1005,32 @@
           if (file && file.type === 'image/png') {
               const reader = new FileReader();
               reader.onload = function (e) {
-                  // 更新头像显示
+                  // Update avatar display
                   document.getElementById('userAvatar').src = e.target.result;
 
-                  // 这里可以添加代码将文件保存为 pp.png
-                  // 由于浏览器的安全限制，无法直接保存文件到本地
-                  // 需要使用端服务来处理文件上传
+                  // 这里可以添加代码将文件保存为 pp.png Here can add code to save the file as pp.png
+                  // 由于浏览器的安全限制，无法直接保存文件到本地 Due to browser security restrictions, files cannot be saved directly to the local computer.
+                  // 需要使用端服务来处理文件上传 Need to use end service to handle file upload
               };
               reader.readAsDataURL(file);
           } else {
-              alert('请上传PNG格式的图片');
+              alert('Please upload an image in PNG format');
           }
       }
 
       function logOut() {
-          // 清除登录状态
+          // 清除登录状态 Clear login status
           localStorage.removeItem('isLoggedIn');
-          // 返回主页
+          // 返回主页 Back to Home
           window.location.href = '../index.html';
       }
 
-      // 添加编辑表单的显示/隐藏逻辑
+      // 添加编辑表单的显示/隐藏逻辑 Add show/hide logic for the edit form
       document.getElementById('btn_edit_profile').addEventListener('click', function() {
           document.getElementById('editProfileForm').style.display = 'block';
           this.style.display = 'none';
           
-          // ���充���单数据
+          // Fill in personal information form data
           document.getElementById('edit_name').value = document.getElementById('name').innerText;
           document.getElementById('edit_gender').value = document.getElementById('gender').innerText;
           document.getElementById('edit_phone_number').value = document.getElementById('phone_number').innerText;
@@ -1043,7 +1043,7 @@
       });
 
       document.getElementById('btn_submit_profile').addEventListener('click', function() {
-          // 这里添加保存逻辑
+          // 这里添加保存逻辑 Add save logic here
           document.getElementById('name').innerText = document.getElementById('edit_name').value;
           document.getElementById('gender').innerText = document.getElementById('edit_gender').value;
           document.getElementById('phone_number').innerText = document.getElementById('edit_phone_number').value;
