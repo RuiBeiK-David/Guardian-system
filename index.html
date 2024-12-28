@@ -162,9 +162,9 @@
     <script src="./js/main.js"></script>
     <script src="./js/index.js"></script>
     <script>
-        // 检查登录状态并导航
+        // 检查登录状态并导航 Check login status and navigate
         function checkLoginAndNavigate(url) {
-            // 这里我们通过检查登录按钮的显示状态来判断是否登录
+            // 这里我们通过检查登录按钮的显示状态来判断是否登录 Here we check the display status of the login button to determine whether to log in
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
             if (isLoggedIn) {
                 window.location.href = url;
@@ -195,14 +195,14 @@
         });
 
         function logout() {
-            // 重置登录状态
+            // 重置登录状态 Reset login status
             document.getElementById('loginButtons').classList.remove('loginFalse');
             document.getElementById('loginButtons').style.display = 'block';
             document.getElementById('loginDropdown').classList.add('loginTrue');
             document.getElementById('loginDropdown').style.display = 'none';
             localStorage.removeItem('isLoggedIn');
             
-            // 返回主页
+            // 返回主页 Back to Home
             if (window.location.pathname !== '/index.html') {
                 window.location.href = 'index.html';
             }
