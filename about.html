@@ -348,7 +348,7 @@
     <script src="./js/bootstrap-5.1.3/bootstrap.bundle.min.js"></script>
     <script src="./js/message.min.js"></script>
     <script>
-        // 检查登录状态并导航
+        // 检查登录状态并导航 Check login status and navigate
         function checkLoginAndNavigate(url) {
             const isLoggedIn = document.getElementById('loginButtons').style.display === 'none';
             if (isLoggedIn) {
@@ -359,26 +359,26 @@
         }
 
         function logout() {
-            // 重置登录状态
+            // 重置登录状态 Reset login status
             document.getElementById('loginButtons').classList.remove('loginFalse');
             document.getElementById('loginButtons').style.display = 'block';
             document.getElementById('loginDropdown').classList.add('loginTrue');
             document.getElementById('loginDropdown').style.display = 'none';
             
-            // 返回主页
+            // 返回主页 Back to Home
             window.location.href = 'index.html';
         }
 
-        // 检查登录状态
+        // 检查登录状态 Check login status
         function checkLoginStatus() {
-            // 这里可以添加从 cookie 或 localStorage 检查登录状态的逻辑
+            // 这里可以添加从 cookie 或 localStorage 检查登录状态的逻辑 Here you can add the logic to check the login status from cookies or localStorage
             const loginStatus = localStorage.getItem('isLoggedIn');
             if (loginStatus !== 'true') {
                 window.location.href = 'index.html';
             }
         }
 
-        // 页面加载时检查登录状态
+        // 页面加载时检查登录状态 Check login status on page load
         document.addEventListener('DOMContentLoaded', checkLoginStatus);
     </script>
 </body>
